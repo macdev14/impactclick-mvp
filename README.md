@@ -59,6 +59,15 @@ impactclick-mvp/
 - Firebase project
 - Vercel account (for deployment)
 
+### 🎯 Widget Integration
+
+Want to add the widget to your website? Check out our quick guides:
+
+- **[Quick Start Guide](QUICK_START.md)** - Add the widget in 5 minutes
+- **[Complete Tutorial](TUTORIAL.md)** - Step-by-step integration guide
+- **[Widget Usage Guide](WIDGET_USAGE.md)** - Advanced configuration options
+- **[HTML Template](widget/template.html)** - Ready-to-use template
+
 ### Local Development
 
 1. **Clone the repository**
