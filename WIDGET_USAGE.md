@@ -19,7 +19,7 @@ Add this code to your HTML page:
   ImpactClick.init({
     campaignId: 'your-campaign-id',
     ngoId: 'your-ngo-id',
-    apiUrl: 'https://backend-q9cnjbs70-lauro-pimentels-projects.vercel.app/api',
+    apiUrl: 'https://backend-mol3m0410-lauro-pimentels-projects.vercel.app/api',
     recaptchaSiteKey: 'your-recaptcha-site-key',
     theme: 'light',
     position: 'bottom-right'
@@ -37,7 +37,7 @@ For testing purposes, you can use the demo configuration:
   ImpactClick.init({
     campaignId: 'demo-campaign',
     ngoId: 'demo-ngo',
-    apiUrl: 'https://backend-q9cnjbs70-lauro-pimentels-projects.vercel.app/api',
+    apiUrl: 'https://backend-mol3m0410-lauro-pimentels-projects.vercel.app/api',
     recaptchaSiteKey: '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI', // Test key
     theme: 'light',
     position: 'bottom-right'

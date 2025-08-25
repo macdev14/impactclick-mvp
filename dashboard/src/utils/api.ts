@@ -1,6 +1,6 @@
 // API configuration for different environments
 const API_BASE_URL = process.env.NODE_ENV === 'production' 
-  ? 'https://backend-r26dorhkq-lauro-pimentels-projects.vercel.app/api'
+  ? 'https://backend-mol3m0410-lauro-pimentels-projects.vercel.app/api'
   : 'http://localhost:3001/api';
 
 // API utility functions
