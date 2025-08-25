@@ -1,0 +1,45 @@
+{
+  "name": "impactclick-mvp",
+  "version": "1.0.0",
+  "description": "CSR Gamified Advertising Platform - MVP",
+  "main": "index.js",
+  "scripts": {
+    "install:all": "npm install && cd backend && npm install && cd ../dashboard && npm install && cd ../widget && npm install && cd ../firebase-functions && npm install",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:dashboard\"",
+    "dev:backend": "cd backend && npm run start:dev",
+    "dev:dashboard": "cd dashboard && npm start",
+    "build": "npm run build:backend && npm run build:dashboard && npm run build:widget",
+    "build:backend": "cd backend && npm run build",
+    "build:dashboard": "cd dashboard && npm run build",
+    "build:widget": "cd widget && npm run build",
+    "test": "npm run test:backend && npm run test:dashboard && npm run test:widget",
+    "test:backend": "cd backend && npm test",
+    "test:dashboard": "cd dashboard && npm test",
+    "test:widget": "cd widget && npm test",
+    "deploy": "npm run build && firebase deploy",
+    "deploy:functions": "cd firebase-functions && firebase deploy --only functions",
+    "deploy:hosting": "cd dashboard && npm run build && firebase deploy --only hosting"
+  },
+  "keywords": [
+    "csr",
+    "advertising",
+    "donations",
+    "ngo",
+    "gamification",
+    "react",
+    "nestjs",
+    "firebase"
+  ],
+  "author": "ImpactClick Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "typescript": "^5.3.3"
+  },
+  "workspaces": [
+    "backend",
+    "dashboard",
+    "widget",
+    "firebase-functions"
+  ]
+}

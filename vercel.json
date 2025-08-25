@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "projects": {
+    "dashboard": {
+      "root": "dashboard",
+      "buildCommand": "npm run build",
+      "outputDirectory": "build"
+    },
+    "backend": {
+      "root": "backend",
+      "buildCommand": "npm run build",
+      "outputDirectory": "dist"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/backend/api/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/dashboard/$1"
+    }
+  ]
+}

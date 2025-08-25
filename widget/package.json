@@ -1,0 +1,31 @@
+{
+  "name": "impactclick-widget",
+  "version": "1.0.0",
+  "description": "Embeddable donation widget for ImpactClick",
+  "main": "dist/impactclick-widget.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development --watch",
+    "test": "jest"
+  },
+  "dependencies": {
+    "axios": "^1.6.2"
+  },
+  "devDependencies": {
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "typescript": "^5.3.3",
+    "ts-loader": "^9.5.1",
+    "@types/node": "^20.10.5",
+    "jest": "^29.7.0",
+    "@types/jest": "^29.5.8"
+  },
+  "keywords": [
+    "widget",
+    "donation",
+    "csr",
+    "advertising"
+  ],
+  "author": "ImpactClick Team",
+  "license": "MIT"
+}
