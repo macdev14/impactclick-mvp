@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website - ImpactClick Widget Template</title>
+    
+    <!-- Load the ImpactClick widget -->
+    <script src="https://cdn.jsdelivr.net/npm/impactclick-widget@1.0.0/dist/impactclick-widget.js"></script>
+    
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #2563eb;
+            margin: 0;
+        }
+        
+        .content {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        
+        .widget-info {
+            background: #f0f9ff;
+            border: 1px solid #0ea5e9;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .code-block {
+            background: #1f2937;
+            color: #f9fafb;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        
+        .highlight {
+            background: #fef3c7;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        
+        .btn {
+            background: #2563eb;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 10px 10px 0;
+            transition: background 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: #1d4ed8;
+        }
+        
+        .btn-secondary {
+            background: #6b7280;
+        }
+        
+        .btn-secondary:hover {
+            background: #4b5563;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌟 Your Website</h1>
+            <p>Welcome to your website with ImpactClick widget integration!</p>
+        </header>
+        
+        <div class="content">
+            <h2>About This Template</h2>
+            <p>This is a template showing how to integrate the ImpactClick widget into your website. 
+               The widget will appear in the bottom-right corner of this page.</p>
+            
+            <div class="widget-info">
+                <h3>🎯 Widget Configuration</h3>
+                <p>Current widget settings:</p>
+                <ul>
+                    <li><strong>Position:</strong> Bottom-right corner</li>
+                    <li><strong>Theme:</strong> Light</li>
+                    <li><strong>Campaign:</strong> Demo Campaign</li>
+                    <li><strong>NGO:</strong> Example NGO</li>
+                    <li><strong>Donation Amount:</strong> DKK 20 per click</li>
+                </ul>
+            </div>
+            
+            <h3>📝 Integration Code</h3>
+            <p>Here's the code that's currently running on this page:</p>
+            
+            <div class="code-block">
+&lt;!-- Load the ImpactClick widget --&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/impactclick-widget@1.0.0/dist/impactclick-widget.js"&gt;&lt;/script&gt;
+
+&lt;!-- Initialize the widget --&gt;
+&lt;script&gt;
+  ImpactClick.init({
+    campaignId: 'demo-campaign',
+    ngoId: 'demo-ngo',
+    apiUrl: 'https://backend-mol3m0410-lauro-pimentels-projects.vercel.app/api',
+    recaptchaSiteKey: '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI',
+    theme: 'light',
+    position: 'bottom-right'
+  });
+&lt;/script&gt;
+            </div>
+            
+            <h3>🔧 Customization</h3>
+            <p>To customize the widget for your website, update these parameters:</p>
+            
+            <div class="code-block">
+ImpactClick.init({
+  campaignId: '<span class="highlight">your-campaign-id</span>',        // Your campaign ID
+  ngoId: '<span class="highlight">your-ngo-id</span>',                 // Your NGO ID
+  apiUrl: 'https://backend-mol3m0410-lauro-pimentels-projects.vercel.app/api',
+  recaptchaSiteKey: '<span class="highlight">your-recaptcha-key</span>', // Your reCAPTCHA key
+  theme: '<span class="highlight">light</span>',                       // 'light' or 'dark'
+  position: '<span class="highlight">bottom-right</span>'              // 'top-left', 'top-right', 'bottom-left', 'bottom-right'
+});
+            </div>
+            
+            <h3>📚 Resources</h3>
+            <p>For more information and advanced customization options:</p>
+            
+            <a href="https://github.com/macdev14/impactclick-mvp" class="btn" target="_blank">
+                📖 View Documentation
+            </a>
+            
+            <a href="https://dashboard-etl7mf1iw-lauro-pimentels-projects.vercel.app" class="btn btn-secondary" target="_blank">
+                🎛️ Admin Dashboard
+            </a>
+            
+            <a href="https://backend-mol3m0410-lauro-pimentels-projects.vercel.app/api/docs" class="btn btn-secondary" target="_blank">
+                🔧 API Documentation
+            </a>
+        </div>
+        
+        <div class="content">
+            <h2>How It Works</h2>
+            <p>When users click the widget button:</p>
+            <ol>
+                <li>reCAPTCHA verification is performed</li>
+                <li>A donation is triggered to the specified NGO</li>
+                <li>The user receives immediate feedback</li>
+                <li>The interaction is tracked for analytics</li>
+            </ol>
+            
+            <p><strong>Note:</strong> This template uses demo/test configuration. For production use, 
+               replace the demo values with your actual campaign and NGO IDs, and use a production reCAPTCHA key.</p>
+        </div>
+    </div>
+
+    <!-- Initialize the ImpactClick widget -->
+    <script>
+        // Wait for the page to load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize the widget
+            ImpactClick.init({
+                campaignId: 'demo-campaign',
+                ngoId: 'demo-ngo',
+                apiUrl: 'https://backend-mol3m0410-lauro-pimentels-projects.vercel.app/api',
+                recaptchaSiteKey: '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI', // Test key
+                theme: 'light',
+                position: 'bottom-right'
+            });
+            
+            console.log('ImpactClick widget initialized successfully!');
+        });
+    </script>
+</body>
+</html>
