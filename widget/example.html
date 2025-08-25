@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImpactClick Widget Example</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: white;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .content {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            margin-bottom: 2rem;
+        }
+        
+        .code-block {
+            background: rgba(0,0,0,0.3);
+            padding: 1rem;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            text-align: left;
+            margin: 1rem 0;
+            overflow-x: auto;
+        }
+        
+        .btn {
+            background: #ffd700;
+            color: #333;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 0.5rem;
+        }
+        
+        .btn:hover {
+            background: #ffed4e;
+            transform: translateY(-2px);
+        }
+        
+        .widget-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .info-card {
+            background: rgba(255,255,255,0.1);
+            padding: 1rem;
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌟 ImpactClick Widget Example</h1>
+        <p>This page demonstrates how to integrate the ImpactClick widget into your website.</p>
+        
+        <div class="content">
+            <h2>Integration Code</h2>
+            <p>Add this code to your HTML page to include the widget:</p>
+            
+            <div class="code-block">
+&lt;!-- Load the ImpactClick widget --&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/impactclick-widget@1.0.0/dist/impactclick-widget.js"&gt;&lt;/script&gt;
+
+&lt;!-- Initialize the widget --&gt;
+&lt;script&gt;
+  ImpactClick.init({
+    campaignId: 'example-campaign',
+    ngoId: 'example-ngo',
+    apiUrl: 'https://backend-q9cnjbs70-lauro-pimentels-projects.vercel.app/api',
+    recaptchaSiteKey: '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI',
+    theme: 'light',
+    position: 'bottom-right'
+  });
+&lt;/script&gt;
+            </div>
+            
+            <button class="btn" onclick="showWidget()">Show Widget</button>
+            <button class="btn" onclick="hideWidget()">Hide Widget</button>
+        </div>
+        
+        <div class="content">
+            <h2>Widget Information</h2>
+            <div class="widget-info">
+                <div class="info-card">
+                    <h3>🎯 Campaign</h3>
+                    <p>Example Campaign</p>
+                </div>
+                <div class="info-card">
+                    <h3>🏥 NGO</h3>
+                    <p>Example NGO</p>
+                </div>
+                <div class="info-card">
+                    <h3>💰 Donation</h3>
+                    <p>DKK 20 per click</p>
+                </div>
+                <div class="info-card">
+                    <h3>🔒 Security</h3>
+                    <p>reCAPTCHA protected</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <h2>How It Works</h2>
+            <p>When users click the widget button, it triggers a corporate-funded donation to the specified NGO. 
+               The widget automatically handles reCAPTCHA verification and prevents duplicate donations.</p>
+        </div>
+    </div>
+
+    <!-- Load the ImpactClick widget -->
+    <script src="https://cdn.jsdelivr.net/npm/impactclick-widget@1.0.0/dist/impactclick-widget.js"></script>
+    
+    <!-- Initialize the widget -->
+    <script>
+        // Initialize the widget
+        ImpactClick.init({
+            campaignId: 'example-campaign',
+            ngoId: 'example-ngo',
+            apiUrl: 'https://backend-q9cnjbs70-lauro-pimentels-projects.vercel.app/api',
+            recaptchaSiteKey: '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI', // Test key
+            theme: 'light',
+            position: 'bottom-right'
+        });
+        
+        // Functions to show/hide widget (for demo purposes)
+        function showWidget() {
+            // The widget should automatically appear
+            console.log('Widget should be visible');
+        }
+        
+        function hideWidget() {
+            // Remove any existing widget elements
+            const widgets = document.querySelectorAll('[data-impactclick-widget]');
+            widgets.forEach(widget => widget.remove());
+            console.log('Widget hidden');
+        }
+        
+        // Auto-show widget after 3 seconds
+        setTimeout(() => {
+            console.log('Widget should appear automatically');
+        }, 3000);
+    </script>
+</body>
+</html>
