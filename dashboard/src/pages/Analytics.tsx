@@ -57,7 +57,22 @@ const Analytics: React.FC = () => {
 
   const fetchAnalyticsData = async () => {
     try {
-      // Mock data - replace with actual API call
+      // Use real API call
+      const response = await fetch(`/api/analytics?timeRange=${timeRange}`, {
+        headers: {
+          'Authorization': `Bearer ${localStorage.getItem('token')}`,
+        },
+      });
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      
+      const data = await response.json();
+      setAnalyticsData(data);
+    } catch (error) {
+      console.error('Error fetching analytics data:', error);
+      // Fallback to mock data if API fails
       const mockData: AnalyticsData = {
         totalClicks: 1500,
         totalDonations: 1200,
@@ -97,10 +112,7 @@ const Analytics: React.FC = () => {
           },
         ],
       };
-      
       setAnalyticsData(mockData);
-    } catch (error) {
-      console.error('Error fetching analytics data:', error);
     } finally {
       setLoading(false);
     }

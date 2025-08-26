@@ -101,6 +101,23 @@ export class FirebaseService implements OnModuleInit {
     return doc.exists ? doc.data() : null;
   }
 
+  async getAllNgos(): Promise<any[]> {
+    const snapshot = await this.db.collection('ngos').get();
+    return snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+  }
+
+  async saveNgo(ngoRecord: any): Promise<void> {
+    await this.db.collection('ngos').doc(ngoRecord.id).set(ngoRecord);
+  }
+
+  async updateNgo(ngoRecord: any): Promise<void> {
+    await this.db.collection('ngos').doc(ngoRecord.id).update(ngoRecord);
+  }
+
+  async deleteNgo(ngoId: string): Promise<void> {
+    await this.db.collection('ngos').doc(ngoId).delete();
+  }
+
   // Analytics operations
   async getAnalytics(filters: any): Promise<any> {
     // Mock analytics data - in production, implement real aggregation
