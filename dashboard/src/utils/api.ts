@@ -1,6 +1,6 @@
 // API configuration for different environments
 const API_BASE_URL = process.env.NODE_ENV === 'production' 
-  ? 'https://backend-mqru8qxeq-lauro-pimentels-projects.vercel.app/api'
+  ? 'https://backend-cmestpaes-lauro-pimentels-projects.vercel.app/api'
   : 'http://localhost:3001/api';
 
 // Helper function to convert time range to date range

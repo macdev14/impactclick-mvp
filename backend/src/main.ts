@@ -14,7 +14,9 @@ async function bootstrap() {
       'https://your-domain.com',
       'https://impactclick.softechcom.com',
       'https://dashboard-eyy27lh5t-lauro-pimentels-projects.vercel.app',
-      'https://backend-r26dorhkq-lauro-pimentels-projects.vercel.app'
+      'https://dashboard-6x95tvx8g-lauro-pimentels-projects.vercel.app',
+      'https://backend-r26dorhkq-lauro-pimentels-projects.vercel.app',
+      'https://backend-mqru8qxeq-lauro-pimentels-projects.vercel.app'
     ],
     credentials: true,
   });

@@ -149,7 +149,7 @@ const Campaigns: React.FC = () => {
 
   const generateWidgetCode = (campaign: Campaign) => {
     const ngo = ngos.find(n => n.id === campaign.ngoId);
-    const apiUrl = 'https://backend-mqru8qxeq-lauro-pimentels-projects.vercel.app/api';
+    const apiUrl = 'https://backend-cmestpaes-lauro-pimentels-projects.vercel.app/api';
     
     return `<!-- ImpactClick Widget Code -->
 <script>

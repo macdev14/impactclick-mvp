@@ -28,8 +28,35 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
+    const unsubscribe = onAuthStateChanged(auth, async (user) => {
       setUser(user);
+      
+      if (user) {
+        // Get the Firebase ID token and store it in localStorage
+        try {
+          const token = await user.getIdToken();
+          localStorage.setItem('token', token);
+          
+          // Set up token refresh
+          const refreshToken = setInterval(async () => {
+            try {
+              const newToken = await user.getIdToken(true); // Force refresh
+              localStorage.setItem('token', newToken);
+            } catch (error) {
+              console.error('Error refreshing token:', error);
+            }
+          }, 10 * 60 * 1000); // Refresh every 10 minutes
+          
+          // Clean up interval on unmount
+          return () => clearInterval(refreshToken);
+        } catch (error) {
+          console.error('Error getting ID token:', error);
+        }
+      } else {
+        // Clear token when user logs out
+        localStorage.removeItem('token');
+      }
+      
       setLoading(false);
     });
 
